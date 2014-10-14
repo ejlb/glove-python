@@ -11,8 +11,8 @@ The code uses asynchronous stochastic gradient descent, and is implemented in Cy
 ## Installation
 1. Clone this repository.
 2. Make sure you have the following packages installed:
-   - `numpy`
-   - `scipy`
+   - `numpy >= 1.7.1`
+   - `scipy >= 0.14.0`
    - `cython`
    - for running the examples, `gensim`.
    - On OSX, you'll need to install `gcc` for `OpenMP` support. The setup script uses `gcc-4.9`, but you can probably change that.
