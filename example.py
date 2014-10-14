@@ -28,7 +28,7 @@ def read_wikipedia_corpus(filename):
 
 
 if __name__ == '__main__':
-    
+
     # Set up command line parameters.
     parser = argparse.ArgumentParser(description='Fit a GloVe model.')
 
@@ -69,7 +69,7 @@ if __name__ == '__main__':
         corpus_model.fit_dictionary(get_data(args.create))
         corpus_model.fit_matrix(get_data(args.create), window=10)
         corpus_model.save('corpus.model')
-        
+
         print 'Dict size: %s' % len(corpus_model.dictionary)
         print 'Collocations: %s' % corpus_model.matrix.nnz
 
@@ -101,3 +101,6 @@ if __name__ == '__main__':
 
         print 'Querying for %s' % args.query
         pprint.pprint(glove.most_similar(args.query, number=10))
+
+    else:
+        parser.print_help()
